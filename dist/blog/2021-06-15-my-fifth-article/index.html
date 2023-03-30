@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Fifth Article</title>
-    <link rel="stylesheet" href="/style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Fifth Article</title>
+        <link rel="stylesheet" href="/style.css">
+        <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-<body>
-    <header class="page-header">
+    </head>
+
+    <body>
+        <header class="page-header">
   <div class="container">
     <div class="page-header__content">
       <div>
@@ -37,7 +39,7 @@
     </div>
   </div>
 </header>
-    
+        
 <article class="main-article">
     <div class="container container--narrow flow">
 
@@ -56,7 +58,7 @@
 
     </div>
 </article>
-    <footer class="site-footer">
+        <footer class="site-footer">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 26.6" class="logo" width="8rem"
     fill="var(--logo-color, #000)">
     <path
@@ -64,6 +66,22 @@
   </svg>
   <p>© 2020 Company Name. All rights reserved.</p>
 </footer>
-</body>
+
+        <script>
+            if (window.netlifyIdentity) {
+                window
+                    .netlifyIdentity
+                    .on("init", user => {
+                        if (!user) {
+                            window
+                                .netlifyIdentity
+                                .on("login", () => {
+                                    document.location.href = "/admin/";
+                                });
+                        }
+                    });
+            }
+        </script>
+    </body>
 
 </html>
