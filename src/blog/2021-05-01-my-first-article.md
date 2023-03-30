@@ -5,7 +5,7 @@ description: Lorem ipsum dolor sit amet consectetur adipisicing elit.
   delectus ad magni vel quo maxime, magnam placeat. Reprehenderit, distinctio
   aliquam?
 author: Kevin Powell
-date: 2021-05-01
+date: 2021-05-28T18:00:00.000Z
 tags:
   - post
   - featured
